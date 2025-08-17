@@ -2,7 +2,7 @@
 baseURL = "https://potatofut.github.io/blog-politico-sergio/"
 languageCode = "es"
 title = "Blog Politico Sergio"
-theme = "lightbi-hugo"
+# theme = "lightbi-hugo"  # Comentado para usar layouts personalizados
 
 # Configuraciones del sitio
 defaultContentLanguage = "es"
