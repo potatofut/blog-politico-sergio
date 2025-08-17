@@ -3,7 +3,7 @@
   <header class="about-header">
     <div class="about-hero">
       <div class="author-info-section">
-        <img src="/images/sergio.jpg" alt="Sergio Corruchaga" class="author-photo" loading="lazy">
+        <img src="{{ "images/sergio.jpg" | relURL }}" alt="Sergio Corruchaga" class="author-photo" loading="lazy">
         <div class="author-info">
           <h1 class="author-name">Sergio Corruchaga</h1>
           <p class="author-title">Analista Político y Desarrollador</p>
@@ -11,7 +11,7 @@
       </div>
       
       <div class="leon-image-section">
-        <img src="/images/Leon.jpg" alt="León - Imagen representativa" class="leon-image" loading="lazy">
+        <img src="{{ "images/Leon.jpg" | relURL }}" alt="León - Imagen representativa" class="leon-image" loading="lazy">
       </div>
     </div>
   </header>
@@ -73,5 +73,5 @@
   </div>
 </article>
 
-<script src="/js/about.js"></script>
+<script src="{{ "js/about.js" | relURL }}"></script>
 {{ end }}
