@@ -12,6 +12,31 @@
   --color-political: #4299e1;
   --color-text: #2d3748;
   --shadow-main: 0 10px 30px rgba(0, 212, 255, 0.2);
+  
+  /* Variables para modo oscuro */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f7fafc;
+  --text-primary: #2d3748;
+  --text-secondary: #718096;
+}
+
+/* MODO OSCURO */
+[data-theme="dark"] {
+  --bg-primary: #1a202c;
+  --bg-secondary: #2d3748;
+  --text-primary: #ffffff;
+  --text-secondary: #cbd5e0;
+  --color-text: #ffffff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-primary: #1a202c;
+    --bg-secondary: #2d3748;
+    --text-primary: #ffffff;
+    --text-secondary: #cbd5e0;
+    --color-text: #ffffff;
+  }
 }
 
 /* BODY PRINCIPAL */
@@ -19,6 +44,15 @@ body {
   background: linear-gradient(135deg, #f0f9ff 0%, #ecfdf5 100%) !important;
   min-height: 100vh;
   font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif !important;
+  color: var(--text-primary) !important;
+}
+
+/* Modo oscuro para body */
+@media (prefers-color-scheme: dark) {
+  body {
+    background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%) !important;
+    color: var(--text-primary) !important;
+  }
 }
 
 /* HEADER CON GRADIENTE */
@@ -86,6 +120,18 @@ main,
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
   position: relative;
   overflow: hidden;
+  color: var(--text-primary) !important;
+}
+
+/* Modo oscuro para posts */
+@media (prefers-color-scheme: dark) {
+  .post,
+  .post-card,
+  .card,
+  .article-card {
+    background: var(--bg-secondary) !important;
+    color: var(--text-primary) !important;
+  }
 }
 
 .post::before,
@@ -207,12 +253,23 @@ a.btn:hover {
   margin-bottom: 2rem !important;
   border: 2px solid transparent !important;
   transition: all 0.3s ease !important;
+  color: var(--text-primary) !important;
 }
 
 .sidebar:hover,
 .widget:hover {
   border-color: var(--color-accent) !important;
   box-shadow: 0 12px 30px rgba(66, 230, 149, 0.15) !important;
+}
+
+/* Modo oscuro para sidebar */
+@media (prefers-color-scheme: dark) {
+  .sidebar,
+  .widget,
+  .aside {
+    background: var(--bg-secondary) !important;
+    color: var(--text-primary) !important;
+  }
 }
 
 /* FOOTER */
@@ -292,4 +349,31 @@ a:hover {
 
 body * {
   transition: all 0.3s ease;
+}
+
+/* ESTILOS DE TEXTO PARA MODO OSCURO */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-primary) !important;
+}
+
+p, span, div, li, td, th {
+  color: var(--text-primary) !important;
+}
+
+/* Estilos específicos para el contenido de la página */
+.content p,
+.post-content p,
+.page-content p,
+.main p {
+  color: var(--text-primary) !important;
+  line-height: 1.6;
+}
+
+/* Modo oscuro adicional */
+@media (prefers-color-scheme: dark) {
+  h1, h2, h3, h4, h5, h6,
+  p, span, div, li, td, th,
+  .content, .main-content {
+    color: var(--text-primary) !important;
+  }
 }
