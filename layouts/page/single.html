@@ -44,6 +44,26 @@
     color: #2c3e50;
 }
 
+/* Modo oscuro para "Acerca de" */
+@media (prefers-color-scheme: dark) {
+    .about-content p {
+        color: #ffffff !important;
+    }
+    
+    .about-content strong {
+        color: #ffffff !important;
+    }
+    
+    .welcome-message {
+        background: var(--bg-secondary) !important;
+        border-left-color: var(--color-primary) !important;
+    }
+    
+    .welcome-message p {
+        color: #ffffff !important;
+    }
+}
+
 @media (max-width: 768px) {
     .about-hero {
         flex-direction: column !important;
