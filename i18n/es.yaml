@@ -1,0 +1,126 @@
+﻿# Localizacion en espanol para el blog politico profesional
+- id: "home"
+  translation: "Inicio"
+
+- id: "posts"
+  translation: "Artículos"
+
+- id: "categories"
+  translation: "Categorías"
+
+- id: "tags"
+  translation: "Etiquetas"
+
+- id: "about"
+  translation: "Acerca de"
+
+- id: "contact"
+  translation: "Contacto"
+
+- id: "search"
+  translation: "Buscar"
+
+- id: "readMore"
+  translation: "Leer más"
+
+- id: "newer"
+  translation: "Más reciente"
+
+- id: "older"
+  translation: "Más antiguo"
+
+- id: "previous"
+  translation: "Anterior"
+
+- id: "next"
+  translation: "Siguiente"
+
+- id: "share"
+  translation: "Compartir"
+
+- id: "edit"
+  translation: "Editar"
+
+- id: "date"
+  translation: "Fecha"
+
+- id: "author"
+  translation: "Autor"
+
+- id: "category"
+  translation: "Categoría"
+
+- id: "tag"
+  translation: "Etiqueta"
+
+- id: "minute"
+  translation: "minuto"
+
+- id: "minutes"
+  translation: "minutos"
+
+- id: "readingTime"
+  translation: "{{.Minutes}} {{if eq .Minutes 1}}{{.MinuteLabel}}{{else}}{{.MinutesLabel}}{{end}} de lectura"
+
+- id: "tableOfContents"
+  translation: "Índice de contenidos"
+
+- id: "menu"
+  translation: "Menú"
+
+- id: "poweredBy"
+  translation: "Sergio Corruchaga 2025 Actualidad Política"
+
+- id: "relatedPosts"
+  translation: "Artículos relacionados"
+
+- id: "lastModified"
+  translation: "Última modificación"
+
+- id: "published"
+  translation: "Publicado"
+
+- id: "updated"
+  translation: "Actualizado"
+
+- id: "noPostsFound"
+  translation: "No se encontraron artículos"
+
+- id: "theme"
+  translation: "Tema"
+
+- id: "toggleTheme"
+  translation: "Cambiar tema"
+
+- id: "darkMode"
+  translation: "Modo oscuro"
+
+- id: "lightMode"
+  translation: "Modo claro"
+
+- id: "allPosts"
+  translation: "Todos los artículos"
+
+- id: "backToTop"
+  translation: "Volver arriba"
+
+- id: "subscribe"
+  translation: "Suscribirse"
+
+- id: "email"
+  translation: "Correo electrónico"
+
+- id: "name"
+  translation: "Nombre"
+
+- id: "message"
+  translation: "Mensaje"
+
+- id: "send"
+  translation: "Enviar"
+
+- id: "subscribe_newsletter"
+  translation: "Suscríbete al boletín"
+
+- id: "enter_email"
+  translation: "Introduce tu correo electrónico"

@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode | default "es" }}" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+    <meta name="description" content="{{ .Description | default .Site.Params.Description }}">
+
+    <!-- Preload de fuentes para mejor rendimiento -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Estilos principales -->
+    <link rel="stylesheet" href="{{ "css/main.css" | relURL }}">
+
+    <!-- Meta tags para SEO -->
+    <meta name="author" content="{{ .Site.Params.Author.Name }}">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="{{ .Permalink }}">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+    <meta property="og:url" content="{{ .Permalink }}">
+    <meta property="og:title" content="{{ .Title }}">
+    <meta property="og:description" content="{{ .Description | default .Site.Params.Description }}">
+    <meta property="og:site_name" content="{{ .Site.Title }}">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="{{ .Permalink }}">
+    <meta property="twitter:title" content="{{ .Title }}">
+    <meta property="twitter:description" content="{{ .Description | default .Site.Params.Description }}">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+    <!-- Aplicar tema inicial para evitar FOUC -->
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('theme') ||
+                              (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        })();
+    </script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="header-container">
+            <a href="{{ "/" | relURL }}" class="site-logo">
+                <img src="/images/sergio.jpg" alt="Sergio Corruchaga" class="logo-photo">
+                <span class="logo-text">{{ .Site.Title }}</span>
+            </a>
+
+            <nav class="main-nav">
+                {{ range .Site.Menus.main }}
+                    <a href="{{ .URL | relURL }}" class="nav-link">{{ .Name }}</a>
+                {{ end }}
+
+                <button class="theme-toggle" aria-label="Cambiar tema">
+                    
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contenido principal -->
+    <main class="main-content">
+        {{ block "main" . }}{{ end }}
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <h3 class="footer-title">Conecta Conmigo</h3>
+            <div class="footer-social">
+                <a href="https://x.com/Corrutruth" class="social-link" target="_blank" rel="noopener noreferrer">
+                    <span></span>
+                    <span>X (Twitter)</span>
+                </a>
+                <a href="https://www.tiktok.com/@sergio_corruchaga" class="social-link" target="_blank" rel="noopener noreferrer">
+                    <span></span>
+                    <span>TikTok</span>
+                </a>
+            </div>
+
+            <p class="footer-text">
+                 {{ now.Year }} {{ .Site.Title }}. Todos los derechos reservados.
+                <br>
+                Análisis político independiente y riguroso.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="{{ "js/main.js" | relURL }}"></script>
+</body>
+</html>

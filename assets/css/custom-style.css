@@ -1,0 +1,295 @@
+﻿/* =============================================================================
+   ESTILOS COLORIDOS PARA BLOG POLÍTICO - GRADIENTES AZUL Y VERDE
+   ============================================================================= */
+
+/* RESET Y VARIABLES */
+:root {
+  --gradient-primary: linear-gradient(135deg, #00f5ff 0%, #83e97b 25%, #42e695 50%, #06ffa5 75%, #00d4ff 100%);
+  --gradient-header: linear-gradient(135deg, #00d4ff 0%, #42e695 100%);
+  --color-primary: #00d4ff;
+  --color-secondary: #42e695;
+  --color-accent: #06ffa5;
+  --color-political: #4299e1;
+  --color-text: #2d3748;
+  --shadow-main: 0 10px 30px rgba(0, 212, 255, 0.2);
+}
+
+/* BODY PRINCIPAL */
+body {
+  background: linear-gradient(135deg, #f0f9ff 0%, #ecfdf5 100%) !important;
+  min-height: 100vh;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif !important;
+}
+
+/* HEADER CON GRADIENTE */
+.navbar,
+.header,
+.site-header,
+header {
+  background: var(--gradient-header) !important;
+  border: none !important;
+  box-shadow: var(--shadow-main) !important;
+  backdrop-filter: blur(20px);
+}
+
+.navbar-brand,
+.site-title,
+.header-title h1,
+.navbar-brand a {
+  color: white !important;
+  font-weight: 800 !important;
+  font-size: 1.8rem !important;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  text-decoration: none !important;
+}
+
+/* NAVEGACIÓN */
+.navbar-nav .nav-link,
+.nav-link,
+.menu a {
+  color: white !important;
+  font-weight: 600 !important;
+  padding: 0.7rem 1.2rem !important;
+  border-radius: 12px !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  margin: 0 0.2rem;
+}
+
+.navbar-nav .nav-link:hover,
+.nav-link:hover,
+.menu a:hover {
+  background: rgba(255, 255, 255, 0.25) !important;
+  color: #1a202c !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* MAIN CONTENT AREA */
+.main-content,
+main,
+.content {
+  background: transparent !important;
+  padding: 2rem 0;
+}
+
+/* POSTS Y TARJETAS */
+.post,
+.post-card,
+.card,
+.article-card {
+  background: white !important;
+  border: 2px solid transparent !important;
+  border-radius: 20px !important;
+  padding: 2rem !important;
+  margin-bottom: 2rem !important;
+  box-shadow: 0 8px 25px rgba(0, 212, 255, 0.1) !important;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.post::before,
+.post-card::before,
+.card::before,
+.article-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--gradient-primary);
+  border-radius: 20px 20px 0 0;
+}
+
+.post:hover,
+.post-card:hover,
+.card:hover,
+.article-card:hover {
+  transform: translateY(-8px) !important;
+  box-shadow: 0 20px 40px rgba(66, 230, 149, 0.25) !important;
+  border-color: var(--color-accent) !important;
+}
+
+/* TÍTULOS DE POSTS */
+.post-title,
+.post-title a,
+.card-title,
+.article-title,
+h2 a {
+  color: var(--color-political) !important;
+  font-weight: 700 !important;
+  font-size: 1.5rem !important;
+  text-decoration: none !important;
+  line-height: 1.3;
+  margin-bottom: 1rem !important;
+  transition: color 0.3s ease !important;
+}
+
+.post-title:hover,
+.post-title a:hover,
+.card-title:hover,
+.article-title:hover,
+h2 a:hover {
+  color: var(--color-primary) !important;
+}
+
+/* METADATA Y FECHAS */
+.post-meta,
+.meta,
+.post-date,
+.article-meta {
+  color: #718096 !important;
+  font-size: 0.9rem !important;
+  margin-bottom: 1rem !important;
+}
+
+/* BOTONES */
+.btn,
+.button,
+.read-more,
+a.btn {
+  background: var(--gradient-primary) !important;
+  border: none !important;
+  border-radius: 25px !important;
+  padding: 0.8rem 2rem !important;
+  color: white !important;
+  font-weight: 600 !important;
+  text-decoration: none !important;
+  display: inline-block !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  box-shadow: 0 4px 15px rgba(0, 212, 255, 0.3) !important;
+}
+
+.btn:hover,
+.button:hover,
+.read-more:hover,
+a.btn:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: 0 12px 30px rgba(66, 230, 149, 0.4) !important;
+  color: white !important;
+}
+
+/* TAGS Y CATEGORÍAS */
+.tag,
+.category,
+.badge,
+.post-tag {
+  background: var(--gradient-primary) !important;
+  color: white !important;
+  padding: 0.4rem 1rem !important;
+  border-radius: 15px !important;
+  font-size: 0.85rem !important;
+  font-weight: 600 !important;
+  text-decoration: none !important;
+  display: inline-block !important;
+  margin: 0.2rem 0.3rem 0.2rem 0 !important;
+  transition: all 0.3s ease !important;
+}
+
+.tag:hover,
+.category:hover,
+.badge:hover,
+.post-tag:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 20px rgba(0, 212, 255, 0.4) !important;
+  color: white !important;
+}
+
+/* SIDEBAR */
+.sidebar,
+.widget,
+.aside {
+  background: white !important;
+  border-radius: 20px !important;
+  padding: 2rem !important;
+  box-shadow: 0 8px 25px rgba(0, 212, 255, 0.1) !important;
+  margin-bottom: 2rem !important;
+  border: 2px solid transparent !important;
+  transition: all 0.3s ease !important;
+}
+
+.sidebar:hover,
+.widget:hover {
+  border-color: var(--color-accent) !important;
+  box-shadow: 0 12px 30px rgba(66, 230, 149, 0.15) !important;
+}
+
+/* FOOTER */
+.footer,
+.site-footer,
+footer {
+  background: var(--gradient-header) !important;
+  color: white !important;
+  padding: 3rem 0 !important;
+  margin-top: 4rem !important;
+  border-radius: 40px 40px 0 0 !important;
+}
+
+.footer a,
+.site-footer a,
+footer a {
+  color: white !important;
+  transition: all 0.3s ease !important;
+}
+
+.footer a:hover,
+.site-footer a:hover,
+footer a:hover {
+  color: #2d3748 !important;
+  text-decoration: none !important;
+}
+
+/* ENLACES GENERALES */
+a {
+  color: var(--color-political) !important;
+  transition: all 0.3s ease !important;
+}
+
+a:hover {
+  color: var(--color-primary) !important;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .post,
+  .post-card,
+  .card,
+  .sidebar,
+  .widget {
+    margin: 1rem 0 !important;
+    padding: 1.5rem !important;
+  }
+  
+  .navbar-brand {
+    font-size: 1.5rem !important;
+  }
+}
+
+/* ANIMACIONES */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.post,
+.post-card,
+.card,
+.widget {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+/* FORZAR APLICACIÓN DE ESTILOS */
+* {
+  box-sizing: border-box;
+}
+
+body * {
+  transition: all 0.3s ease;
+}

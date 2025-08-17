@@ -1,0 +1,150 @@
+﻿{{ define "main" }}
+<article class="post-single fade-in-up">
+    <header class="post-header" style="text-align: center; margin-bottom: 3rem; padding: 2rem 0; background: var(--bg-secondary); border-radius: 16px;">
+        <h1 style="font-size: 2.5rem; font-weight: 900; color: var(--text-primary); margin-bottom: 1rem; line-height: 1.2;">{{ .Title }}</h1>
+        
+        <div style="display: flex; justify-content: center; gap: 1.5rem; margin-bottom: 1rem; color: var(--text-muted); flex-wrap: wrap;">
+            <span> {{ .Date.Format "2 January 2006" }}</span>
+            {{ if .Params.categories }}
+                <span> {{ index .Params.categories 0 }}</span>
+            {{ end }}
+            <span> {{ .Site.Params.Author.Name }}</span>
+        </div>
+        
+        {{ if .Description }}
+        <p style="font-size: 1.2rem; color: var(--text-secondary); max-width: 700px; margin: 0 auto; line-height: 1.6;">
+            {{ .Description }}
+        </p>
+        {{ end }}
+    </header>
+
+    <div class="post-content" style="max-width: 800px; margin: 0 auto;">
+        <div style="font-size: 1.1rem; line-height: 1.8; color: var(--text-primary);">
+            {{ .Content }}
+        </div>
+        
+        {{ if .Params.tags }}
+        <div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border-color);">
+            <h4 style="color: var(--text-secondary); margin-bottom: 1rem;">Etiquetas:</h4>
+            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                {{ range .Params.tags }}
+                    <span style="background: var(--bg-secondary); color: var(--text-secondary); padding: 0.4rem 0.8rem; border-radius: 8px; font-size: 0.9rem; border: 1px solid var(--border-color);">
+                        {{ . }}
+                    </span>
+                {{ end }}
+            </div>
+        </div>
+        {{ end }}
+    </div>
+
+    <!-- Navegacion entre posts -->
+    <nav style="margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--border-color); display: flex; justify-content: space-between; gap: 2rem;">
+        {{ if .PrevInSection }}
+        <a href="{{ .PrevInSection.RelPermalink }}" style="flex: 1; text-decoration: none; color: var(--text-secondary); padding: 1.5rem; background: var(--bg-secondary); border-radius: 12px; transition: all 0.3s ease;">
+            <div style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 0.5rem;"> Anterior</div>
+            <div style="font-weight: 600; color: var(--accent-primary);">{{ .PrevInSection.Title }}</div>
+        </a>
+        {{ end }}
+        
+        {{ if .NextInSection }}
+        <a href="{{ .NextInSection.RelPermalink }}" style="flex: 1; text-decoration: none; color: var(--text-secondary); padding: 1.5rem; background: var(--bg-secondary); border-radius: 12px; transition: all 0.3s ease; text-align: right;">
+            <div style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 0.5rem;">Siguiente </div>
+            <div style="font-weight: 600; color: var(--accent-primary);">{{ .NextInSection.Title }}</div>
+        </a>
+        {{ end }}
+    </nav>
+</article>
+
+<!-- Estilo adicional para el contenido del post -->
+<style>
+.post-content h2, .post-content h3, .post-content h4 {
+    color: var(--accent-primary);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.post-content h2 {
+    font-size: 1.8rem;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 0.5rem;
+}
+
+.post-content h3 {
+    font-size: 1.4rem;
+}
+
+.post-content h4 {
+    font-size: 1.2rem;
+}
+
+.post-content p {
+    margin-bottom: 1.5rem;
+}
+
+.post-content blockquote {
+    border-left: 4px solid var(--accent-primary);
+    padding-left: 1.5rem;
+    margin: 2rem 0;
+    font-style: italic;
+    background: var(--bg-secondary);
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.post-content ul, .post-content ol {
+    margin: 1.5rem 0;
+    padding-left: 2rem;
+}
+
+.post-content li {
+    margin-bottom: 0.5rem;
+}
+
+.post-content a {
+    color: var(--accent-primary);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.post-content a:hover {
+    border-bottom-color: var(--accent-primary);
+}
+
+.post-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: var(--shadow-medium);
+    margin: 2rem 0;
+}
+
+.post-content code {
+    background: var(--bg-secondary);
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    border: 1px solid var(--border-color);
+}
+
+.post-content pre {
+    background: var(--bg-secondary);
+    padding: 1.5rem;
+    border-radius: 8px;
+    overflow-x: auto;
+    margin: 2rem 0;
+    border: 1px solid var(--border-color);
+}
+
+@media (max-width: 768px) {
+    .post-header h1 {
+        font-size: 2rem !important;
+    }
+    
+    .post-content {
+        font-size: 1rem !important;
+    }
+}
+</style>
+{{ end }}

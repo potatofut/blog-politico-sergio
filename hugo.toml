@@ -1,0 +1,61 @@
+# Configuracion Hugo - Blog Politico Sergio
+baseURL = "https://tu-usuario.github.io/blog-politico/"
+languageCode = "es"
+title = "Blog Politico Sergio"
+theme = "lightbi-hugo"
+
+# Configuraciones del sitio
+defaultContentLanguage = "es"
+summaryLength = 30
+
+# Configuracion de paginacion actualizada
+[pagination]
+  pagerSize = 10
+
+# Configuracion del menu principal
+[menu]
+  [[menu.main]]
+    name = "Inicio"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "Posts"
+    url = "/posts/"
+    weight = 2
+  [[menu.main]]
+    name = "Acerca de"
+    url = "/acerca-de/"
+    weight = 3
+
+# Parametros del tema
+[params]
+  description = "Blog de analisis politico y social de Sergio Corruchaga"
+  
+  # Configuracion del autor
+  [params.author]
+    name = "Sergio Corruchaga"
+    email = "sergio@corruchaga.com"
+    bio = "Analista politico y social especializado en economia y politicas publicas"
+  
+  # Configuracion social
+  [params.social]
+    twitter = "https://x.com/Corrutruth"
+    tiktok = "https://www.tiktok.com/@sergio_corruchaga"
+
+# Configuracion de markup
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    style = "github"
+    lineNos = true
+    lineNumbersInTable = false
+
+# Configuracion de idiomas
+[languages]
+  [languages.es]
+    languageName = "Espanol"
+    weight = 1
+    title = "Blog Politico Sergio"
+    contentDir = "content"

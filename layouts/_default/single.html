@@ -1,0 +1,86 @@
+﻿{{ define "main" }}
+<div class="container">
+    <article class="post-single fade-in-up">
+        <header class="post-header" style="text-align: center; margin-bottom: 3rem; padding: 2rem 0;">
+            <h1 style="font-size: 2.5rem; font-weight: 900; color: var(--text-primary); margin-bottom: 1rem;">{{ .Title }}</h1>
+            
+            <div style="display: flex; justify-content: center; gap: 1.5rem; margin-bottom: 1rem; color: var(--text-muted); flex-wrap: wrap;">
+                <span>📅 {{ .Date.Format "2 January 2006" }}</span>
+                {{ if .Params.categories }}
+                    <span>📂 {{ index .Params.categories 0 }}</span>
+                {{ end }}
+                <span>✍️ {{ .Site.Params.Author.Name }}</span>
+            </div>
+            
+            {{ if .Description }}
+            <p style="font-size: 1.2rem; color: var(--text-secondary); max-width: 700px; margin: 0 auto;">
+                {{ .Description }}
+            </p>
+            {{ end }}
+        </header>
+
+        <div class="post-content" style="max-width: 800px; margin: 0 auto; line-height: 1.8;">
+            {{ .Content }}
+        </div>
+        
+        {{ if .Params.tags }}
+        <div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #eee;">
+            <h4>🏷️ Etiquetas:</h4>
+            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                {{ range .Params.tags }}
+                    <span style="background: #f1f3f4; padding: 0.4rem 0.8rem; border-radius: 8px; font-size: 0.9rem;">
+                        {{ . }}
+                    </span>
+                {{ end }}
+            </div>
+        </div>
+        {{ end }}
+    </article>
+</div>
+
+<style>
+.post-content p {
+    margin-bottom: 1.5rem !important;
+    text-align: justify;
+}
+
+.post-content h1, .post-content h2, .post-content h3, .post-content h4 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+}
+
+.post-content h2 {
+    font-size: 1.8rem;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 0.5rem;
+}
+
+.post-content h3 {
+    font-size: 1.4rem;
+}
+
+.post-content h4 {
+    font-size: 1.2rem;
+}
+
+.post-content blockquote {
+    border-left: 4px solid #3498db;
+    padding-left: 1.5rem;
+    margin: 2rem 0;
+    font-style: italic;
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.post-content ul, .post-content ol {
+    margin: 1.5rem 0;
+    padding-left: 2rem;
+}
+
+.post-content li {
+    margin-bottom: 0.8rem;
+}
+</style>
+{{ end }}

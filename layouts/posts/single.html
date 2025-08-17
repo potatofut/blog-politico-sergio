@@ -1,0 +1,105 @@
+{{ define "main" }}
+<div class="container">
+    <article class="post-single">
+        <header class="post-header" style="text-align: center; margin-bottom: 3rem; padding: 2rem 0;">
+            <h1 style="font-size: 2.5rem; font-weight: 900; margin-bottom: 1rem;">{{ .Title }}</h1>
+            
+            <div style="display: flex; justify-content: center; gap: 1.5rem; margin-bottom: 1rem; opacity: 0.7; flex-wrap: wrap;">
+                <span>📅 {{ .Date.Format "2 January 2006" }}</span>
+                {{ if .Params.categories }}
+                    <span>📂 {{ index .Params.categories 0 }}</span>
+                {{ end }}
+                <span>✍️ {{ if .Params.author }}{{ .Params.author }}{{ else }}{{ .Site.Params.Author.Name }}{{ end }}</span>
+            </div>
+            
+            {{ if .Description }}
+            <p style="font-size: 1.2rem; opacity: 0.8; max-width: 700px; margin: 0 auto;">
+                {{ .Description }}
+            </p>
+            {{ end }}
+        </header>
+
+        <div class="post-content" style="max-width: 800px; margin: 0 auto; line-height: 1.8; font-size: 1.1rem;">
+            {{ .Content }}
+        </div>
+        
+        {{ if .Params.tags }}
+        <div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #eee;">
+            <h4>🏷️ Etiquetas:</h4>
+            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 1rem;">
+                {{ range .Params.tags }}
+                    <span style="background: #f1f3f4; padding: 0.4rem 0.8rem; border-radius: 8px; font-size: 0.9rem;">
+                        {{ . }}
+                    </span>
+                {{ end }}
+            </div>
+        </div>
+        {{ end }}
+
+        <!-- Navegación entre posts -->
+        {{ if or .PrevInSection .NextInSection }}
+        <nav style="margin-top: 4rem; padding-top: 2rem; border-top: 1px solid #eee; display: flex; justify-content: space-between; gap: 2rem;">
+            {{ if .PrevInSection }}
+            <a href="{{ .PrevInSection.RelPermalink }}" style="flex: 1; text-decoration: none; padding: 1.5rem; background: #f8f9fa; border-radius: 8px;">
+                <div style="font-size: 0.9rem; opacity: 0.7; margin-bottom: 0.5rem;">← Anterior</div>
+                <div style="font-weight: 600;">{{ .PrevInSection.Title }}</div>
+            </a>
+            {{ end }}
+            
+            {{ if .NextInSection }}
+            <a href="{{ .NextInSection.RelPermalink }}" style="flex: 1; text-decoration: none; padding: 1.5rem; background: #f8f9fa; border-radius: 8px; text-align: right;">
+                <div style="font-size: 0.9rem; opacity: 0.7; margin-bottom: 0.5rem;">Siguiente →</div>
+                <div style="font-weight: 600;">{{ .NextInSection.Title }}</div>
+            </a>
+            {{ end }}
+        </nav>
+        {{ end }}
+    </article>
+</div>
+
+<style>
+.post-content p {
+    margin-bottom: 1.5rem !important;
+    text-align: justify;
+}
+
+.post-content h1, .post-content h2, .post-content h3, .post-content h4 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+}
+
+.post-content h2 {
+    font-size: 1.8rem;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 0.5rem;
+}
+
+.post-content h3 {
+    font-size: 1.4rem;
+}
+
+.post-content h4 {
+    font-size: 1.2rem;
+}
+
+.post-content blockquote {
+    border-left: 4px solid #3498db;
+    padding-left: 1.5rem;
+    margin: 2rem 0;
+    font-style: italic;
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.post-content ul, .post-content ol {
+    margin: 1.5rem 0;
+    padding-left: 2rem;
+}
+
+.post-content li {
+    margin-bottom: 0.8rem;
+}
+</style>
+{{ end }}

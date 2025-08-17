@@ -1,0 +1,54 @@
+﻿{{ define "main" }}
+<div class="fade-in">
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title">Hola, soy {{ .Site.Params.Author.Name }}</h1>
+            <p class="hero-subtitle">Bienvenido a mi espacio de análisis político</p>
+            <p class="hero-description">
+                {{ .Site.Params.Description }}. Aquí encontrarás análisis profundos, 
+                reflexiones críticas y perspectivas independientes sobre los acontecimientos 
+                que moldean nuestro presente político y social.
+            </p>
+            <a href="#posts" class="cta-button">Explorar Contenido</a>
+        </div>
+    </section>
+
+    <!-- Posts Section -->
+    <section class="posts-section" id="posts">
+        <h2 class="section-title">Artículos Recientes</h2>
+        <p class="section-subtitle">Una selección de mis análisis más recientes sobre política y sociedad</p>
+        
+        <div class="posts-grid">
+            {{ range first 6 (where .Site.RegularPages "Type" "posts") }}
+                <article class="post-card">
+                    <h3 class="post-title">
+                        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                    </h3>
+                    
+                    <div class="post-meta">
+                        <span class="post-date">{{ .Date.Format "2 January 2006" }}</span>
+                        {{ if .Params.categories }}
+                            <span class="post-category">{{ index .Params.categories 0 }}</span>
+                        {{ end }}
+                    </div>
+                    
+                    <div class="post-excerpt">
+                        {{ .Summary }}
+                    </div>
+                    
+                    <a href="{{ .RelPermalink }}" class="read-more">
+                        Leer más 
+                    </a>
+                </article>
+            {{ end }}
+        </div>
+        
+        {{ if gt (len (where .Site.RegularPages "Type" "posts")) 6 }}
+        <div style="text-align: center; margin-top: 3rem;">
+            <a href="{{ "posts" | relURL }}" class="cta-button">Ver Todos los Artículos</a>
+        </div>
+        {{ end }}
+    </section>
+</div>
+{{ end }}

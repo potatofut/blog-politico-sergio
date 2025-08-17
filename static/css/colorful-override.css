@@ -1,0 +1,115 @@
+﻿/* ESTILOS COLORIDOS SIMPLES PARA BLOG POLÍTICO */
+
+/* Fondo con gradiente */
+body {
+    background: linear-gradient(135deg, #f0f9ff 0%, #ecfdf5 100%) !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Header con gradiente azul-verde */
+.navbar, .header, header, nav, .site-header {
+    background: linear-gradient(135deg, #00d4ff 0%, #42e695 100%) !important;
+    box-shadow: 0 8px 30px rgba(0, 212, 255, 0.3) !important;
+    border: none !important;
+}
+
+/* Texto del header en blanco */
+.navbar-brand, .navbar-brand a, .site-title, .nav-link, .navbar-nav a {
+    color: white !important;
+    font-weight: 700 !important;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3) !important;
+    text-decoration: none !important;
+}
+
+/* Hover en navegación */
+.nav-link:hover, .navbar-nav a:hover {
+    background: rgba(255, 255, 255, 0.2) !important;
+    border-radius: 8px !important;
+    color: #1a202c !important;
+}
+
+/* Tarjetas con efectos */
+.card, .post, .article {
+    background: white !important;
+    border-radius: 15px !important;
+    box-shadow: 0 5px 20px rgba(0, 212, 255, 0.1) !important;
+    border: 1px solid rgba(66, 230, 149, 0.2) !important;
+    padding: 1.5rem !important;
+    margin: 1rem 0 !important;
+    transition: all 0.3s ease !important;
+}
+
+.card:hover, .post:hover, .article:hover {
+    transform: translateY(-5px) !important;
+    box-shadow: 0 15px 35px rgba(66, 230, 149, 0.2) !important;
+    border-color: #06ffa5 !important;
+}
+
+/* Botones con gradiente */
+.btn, .button, .btn-primary {
+    background: linear-gradient(135deg, #00d4ff 0%, #42e695 100%) !important;
+    border: none !important;
+    border-radius: 20px !important;
+    color: white !important;
+    font-weight: 600 !important;
+    padding: 0.7rem 1.5rem !important;
+    text-decoration: none !important;
+}
+
+.btn:hover, .button:hover, .btn-primary:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 25px rgba(0, 212, 255, 0.3) !important;
+    color: white !important;
+}
+
+/* Títulos en azul político */
+h1, h2, h3, .post-title, .card-title {
+    color: #4299e1 !important;
+    font-weight: 700 !important;
+}
+
+/* Enlaces */
+a {
+    color: #4299e1 !important;
+    transition: color 0.3s ease !important;
+}
+
+a:hover {
+    color: #00d4ff !important;
+    text-decoration: none !important;
+}
+
+/* Footer con gradiente */
+.footer, footer, .site-footer {
+    background: linear-gradient(135deg, #00d4ff 0%, #42e695 100%) !important;
+    color: white !important;
+    padding: 2rem 0 !important;
+    margin-top: 3rem !important;
+}
+
+.footer a, footer a, .site-footer a {
+    color: white !important;
+}
+
+.footer a:hover, footer a:hover, .site-footer a:hover {
+    color: #2d3748 !important;
+}
+
+/* Tags coloridos */
+.tag, .badge, .category {
+    background: linear-gradient(135deg, #00d4ff 0%, #42e695 100%) !important;
+    color: white !important;
+    border-radius: 12px !important;
+    padding: 0.3rem 0.8rem !important;
+    font-size: 0.8rem !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+    display: inline-block !important;
+    margin: 0.2rem !important;
+}
+
+/* Asegurar que todo se vea bien */
+.container, .content, .main {
+    background: transparent !important;
+}

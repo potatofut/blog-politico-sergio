@@ -1,0 +1,88 @@
+﻿{{ define "main" }}
+<div class="fade-in">
+    <!-- Header de la pagina de posts -->
+    <header style="text-align: center; margin-bottom: 3rem; padding: 3rem 0; background: var(--bg-secondary); border-radius: 20px;">
+        <h1 style="font-size: 3rem; font-weight: 900; color: var(--text-primary); margin-bottom: 1rem;">Todos los Artículos</h1>
+        <p style="font-size: 1.2rem; color: var(--text-secondary); max-width: 600px; margin: 0 auto;">
+            Explora mi colección completa de análisis políticos, reflexiones sociales y comentarios sobre la actualidad.
+        </p>
+    </header>
+
+    <!-- Grid de posts -->
+    <div class="posts-grid">
+        {{ range .Paginator.Pages }}
+            <article class="post-card fade-in-up">
+                <h2 class="post-title">
+                    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                </h2>
+                
+                <div class="post-meta">
+                    <span class="post-date"> {{ .Date.Format "2 January 2006" }}</span>
+                    {{ if .Params.categories }}
+                        <span class="post-category"> {{ index .Params.categories 0 }}</span>
+                    {{ end }}
+                    <span class="post-author"> {{ .Site.Params.Author.Name }}</span>
+                </div>
+                
+                <div class="post-excerpt">
+                    {{ .Summary }}
+                </div>
+                
+                <a href="{{ .RelPermalink }}" class="read-more">
+                    Leer artículo completo 
+                </a>
+            </article>
+        {{ end }}
+    </div>
+
+    <!-- Paginacion -->
+    {{ if gt .Paginator.TotalPages 1 }}
+    <nav style="margin-top: 4rem; display: flex; justify-content: center; gap: 1rem; align-items: center;">
+        {{ if .Paginator.HasPrev }}
+            <a href="{{ .Paginator.Prev.URL }}" style="background: var(--bg-secondary); color: var(--text-primary); padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; border: 1px solid var(--border-color); transition: all 0.3s ease;">
+                 Anterior
+            </a>
+        {{ end }}
+
+        <span style="background: var(--accent-primary); color: white; padding: 0.75rem 1rem; border-radius: 8px; font-weight: 600;">
+            {{ .Paginator.PageNumber }} de {{ .Paginator.TotalPages }}
+        </span>
+
+        {{ if .Paginator.HasNext }}
+            <a href="{{ .Paginator.Next.URL }}" style="background: var(--bg-secondary); color: var(--text-primary); padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; border: 1px solid var(--border-color); transition: all 0.3s ease;">
+                Siguiente 
+            </a>
+        {{ end }}
+    </nav>
+    {{ end }}
+</div>
+
+<!-- Estilos adicionales para la lista -->
+<style>
+.post-meta {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    flex-wrap: wrap;
+}
+
+.post-meta span {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+@media (max-width: 768px) {
+    .post-meta {
+        gap: 0.5rem;
+        font-size: 0.8rem;
+    }
+    
+    .posts-grid {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+{{ end }}
