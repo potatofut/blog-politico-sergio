@@ -1,5 +1,5 @@
 # Configuracion Hugo - Blog Politico Sergio
-baseURL = "https://tu-usuario.github.io/blog-politico/"
+baseURL = "https://potatofut.github.io/mi-blog-politico/"
 languageCode = "es"
 title = "Blog Politico Sergio"
 theme = "lightbi-hugo"
