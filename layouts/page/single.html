@@ -34,46 +34,7 @@
 </div>
 
 <style>
-/* Modo claro: letras oscuras */
-.about-content p {
-    margin-bottom: 1.5rem !important;
-    color: #555 !important;
-    text-align: justify;
-}
-
-.about-content strong {
-    color: #2c3e50 !important;
-}
-
-.welcome-message {
-    background: #f8f9fa !important;
-    border-left: 4px solid #007bff !important;
-}
-
-.welcome-message p {
-    color: #666 !important;
-}
-
-/* Modo oscuro: letras blancas */
-@media (prefers-color-scheme: dark) {
-    .about-content p {
-        color: #ffffff !important;
-    }
-    
-    .about-content strong {
-        color: #ffffff !important;
-    }
-    
-    .welcome-message {
-        background: var(--bg-secondary) !important;
-        border-left-color: var(--color-primary) !important;
-    }
-    
-    .welcome-message p {
-        color: #ffffff !important;
-    }
-}
-
+/* Estilos responsivos específicos para la página "Acerca de" */
 @media (max-width: 768px) {
     .about-hero {
         flex-direction: column !important;
@@ -89,9 +50,17 @@
         height: 300px !important;
     }
     
-    .social-links > div {
-        flex-direction: column !important;
-        gap: 1rem !important;
+    .profile-photo {
+        width: 150px !important;
+        height: 150px !important;
+    }
+    
+    .about-hero h1 {
+        font-size: 2rem !important;
+    }
+    
+    .about-content {
+        padding: 0 1rem !important;
     }
 }
 </style>
