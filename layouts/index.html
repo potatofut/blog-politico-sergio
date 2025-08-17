@@ -1,0 +1,50 @@
+﻿{{ define "main" }}
+<div class="home-container" style="max-width: 1200px; margin: 0 auto; padding: 2rem;">
+    <div class="hero-section" style="text-align: center; margin-bottom: 3rem;">
+        <div style="margin-bottom: 2rem;">
+            <img src="{{ "images/sergio.jpg" | relURL }}" alt="Sergio Corruchaga" style="width: 200px; height: 200px; border-radius: 50%; object-fit: cover; border: 6px solid var(--color-primary); box-shadow: 0 12px 30px rgba(0, 212, 255, 0.3); margin-bottom: 1.5rem;">
+        </div>
+        <h1 style="font-size: 2.5rem; color: #4299e1; margin-bottom: 0.5rem;">Hola, soy Sergio Corruchaga</h1>
+        <h2 style="font-size: 3rem; color: #4299e1; margin-bottom: 1rem;">{{ .Site.Title }}</h2>
+        <p style="font-size: 1.2rem; color: var(--text-secondary); max-width: 600px; margin: 0 auto;">
+            Análisis político profesional y noticias de actualidad
+        </p>
+    </div>
+
+    {{ $posts := where .Site.RegularPages "Type" "posts" }}
+    {{ $posts := $posts.ByDate.Reverse }}
+    
+    {{ if gt (len $posts) 0 }}
+    <div class="posts-grid">
+        {{ range $index, $post := $posts }}
+            {{ if eq $index 0 }}
+                <article class="featured-post">
+                    <div class="post-meta">
+                        <span> {{ .Date.Format "2 de January, 2006" }}</span>
+                        {{ range .Params.categories }}
+                            <span class="category-tag">#{{ . }}</span>
+                        {{ end }}
+                    </div>
+                    
+                    <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+                    <div class="post-summary">{{ .Summary }}</div>
+                    <a href="{{ .Permalink }}" class="read-more-btn">Leer artículo completo </a>
+                </article>
+            {{ else }}
+                <article class="secondary-post">
+                    <div class="post-meta">
+                        <span> {{ .Date.Format "2 Jan" }}</span>
+                        {{ range first 1 .Params.categories }}
+                            <span class="category-tag">#{{ . }}</span>
+                        {{ end }}
+                    </div>
+                    <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+                    <p>{{ .Summary | truncate 150 }}</p>
+                    <a href="{{ .Permalink }}">Leer más </a>
+                </article>
+            {{ end }}
+        {{ end }}
+    </div>
+    {{ end }}
+</div>
+{{ end }}

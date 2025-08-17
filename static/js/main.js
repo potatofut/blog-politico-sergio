@@ -102,10 +102,15 @@ class BlogManager {
         const updateScrollEffects = () => {
             const scrolled = window.pageYOffset;
             const header = document.querySelector('.main-header');
+            const isDarkMode = this.getCurrentTheme() === 'dark';
             
             if (header) {
                 if (scrolled > 100) {
-                    header.style.background = 'rgba(255, 255, 255, 0.95)';
+                    if (isDarkMode) {
+                        header.style.background = 'rgba(26, 32, 44, 0.95)';
+                    } else {
+                        header.style.background = 'rgba(255, 255, 255, 0.95)';
+                    }
                     header.style.backdropFilter = 'blur(20px)';
                 } else {
                     header.style.background = 'var(--bg-primary)';

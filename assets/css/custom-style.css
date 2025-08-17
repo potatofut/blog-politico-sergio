@@ -194,7 +194,8 @@ h2 a:hover {
 .btn,
 .button,
 .read-more,
-a.btn {
+a.btn,
+.cta-button {
   background: var(--gradient-primary) !important;
   border: none !important;
   border-radius: 25px !important;
@@ -210,10 +211,34 @@ a.btn {
 .btn:hover,
 .button:hover,
 .read-more:hover,
-a.btn:hover {
+a.btn:hover,
+.cta-button:hover {
   transform: translateY(-3px) !important;
   box-shadow: 0 12px 30px rgba(66, 230, 149, 0.4) !important;
   color: white !important;
+}
+
+/* Modo oscuro para botones - mantener el gradiente hermoso */
+@media (prefers-color-scheme: dark) {
+  .btn,
+  .button,
+  .read-more,
+  a.btn,
+  .cta-button {
+    background: var(--gradient-primary) !important;
+    color: white !important;
+    box-shadow: 0 4px 15px rgba(0, 212, 255, 0.4) !important;
+  }
+  
+  .btn:hover,
+  .button:hover,
+  .read-more:hover,
+  a.btn:hover,
+  .cta-button:hover {
+    transform: translateY(-3px) !important;
+    box-shadow: 0 12px 30px rgba(66, 230, 149, 0.6) !important;
+    color: white !important;
+  }
 }
 
 /* TAGS Y CATEGORÍAS */
@@ -364,7 +389,10 @@ p, span, div, li, td, th {
 .content p,
 .post-content p,
 .page-content p,
-.main p {
+.main p,
+.about-content p,
+.about-content,
+.about-section p {
   color: var(--text-primary) !important;
   line-height: 1.6;
 }
@@ -373,7 +401,13 @@ p, span, div, li, td, th {
 @media (prefers-color-scheme: dark) {
   h1, h2, h3, h4, h5, h6,
   p, span, div, li, td, th,
-  .content, .main-content {
+  .content, .main-content,
+  .about-content, .about-content p {
     color: var(--text-primary) !important;
+  }
+  
+  /* Arreglar header en scroll para modo oscuro */
+  .main-header {
+    background: var(--bg-primary) !important;
   }
 }
