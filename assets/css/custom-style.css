@@ -411,3 +411,30 @@ p, span, div, li, td, th {
     background: var(--bg-primary) !important;
   }
 }
+
+/* BOTONES DE REDES SOCIALES */
+.social-btn {
+  /* Modo claro: morado como el botón de Inicio */
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  color: white !important;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3) !important;
+}
+
+.social-btn:hover {
+  box-shadow: 0 12px 30px rgba(102, 126, 234, 0.5) !important;
+  color: white !important;
+}
+
+/* Modo oscuro: gradiente colorido del blog */
+@media (prefers-color-scheme: dark) {
+  .social-btn {
+    background: var(--gradient-primary) !important;
+    color: white !important;
+    box-shadow: 0 4px 15px rgba(0, 212, 255, 0.3) !important;
+  }
+  
+  .social-btn:hover {
+    box-shadow: 0 12px 30px rgba(66, 230, 149, 0.4) !important;
+    color: white !important;
+  }
+}

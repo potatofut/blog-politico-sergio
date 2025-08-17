@@ -34,17 +34,27 @@
 </div>
 
 <style>
+/* Modo claro: letras oscuras */
 .about-content p {
     margin-bottom: 1.5rem !important;
-    color: #555;
+    color: #555 !important;
     text-align: justify;
 }
 
 .about-content strong {
-    color: #2c3e50;
+    color: #2c3e50 !important;
 }
 
-/* Modo oscuro para "Acerca de" */
+.welcome-message {
+    background: #f8f9fa !important;
+    border-left: 4px solid #007bff !important;
+}
+
+.welcome-message p {
+    color: #666 !important;
+}
+
+/* Modo oscuro: letras blancas */
 @media (prefers-color-scheme: dark) {
     .about-content p {
         color: #ffffff !important;
