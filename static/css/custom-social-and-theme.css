@@ -40,14 +40,15 @@
 /* MODO CLARO: Texto oscuro para legibilidad */
 .about-content p {
     margin-bottom: 1.5rem !important;
-    color: #555555 !important;
+    color: #2d3748 !important; /* Gris muy oscuro, casi negro */
     text-align: justify;
     line-height: 1.8;
+    font-weight: 500 !important; /* Un poco más grueso */
 }
 
 .about-content strong {
-    color: #2c3e50 !important;
-    font-weight: 600;
+    color: #1a202c !important; /* Negro suave */
+    font-weight: 700 !important; /* Más grueso para destacar */
 }
 
 .welcome-message {
