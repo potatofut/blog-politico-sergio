@@ -1,0 +1,4 @@
+# Evitar redirecciones no deseadas
+RewriteEngine On
+RewriteCond %{HTTP_HOST} !^potatofut\.github\.io$ [NC]
+RewriteRule ^(.*)$ https://potatofut.github.io/mi-blog-politico/$1 [R=301,L]
