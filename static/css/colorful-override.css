@@ -110,7 +110,12 @@ a:hover {
 }
 
 /* Botones sociales específicos - FORZAR PÚRPURA */
-.social-link, .social-btn, .btn-social {
+.social-link, .social-btn, .btn-social,
+.footer-social .social-link,
+footer .social-link,
+.main-footer .social-link,
+.footer-content .social-link,
+a[href*="twitter.com"], a[href*="x.com"], a[href*="tiktok.com"] {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
     color: white !important;
     border: none !important;
@@ -122,11 +127,26 @@ a:hover {
     box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3) !important;
 }
 
-.social-link:hover, .social-btn:hover, .btn-social:hover {
+.social-link:hover, .social-btn:hover, .btn-social:hover,
+.footer-social .social-link:hover,
+footer .social-link:hover,
+.main-footer .social-link:hover,
+.footer-content .social-link:hover,
+a[href*="twitter.com"]:hover, a[href*="x.com"]:hover, a[href*="tiktok.com"]:hover {
     background: linear-gradient(135deg, #764ba2 0%, #667eea 100%) !important;
     transform: translateY(-2px) !important;
     box-shadow: 0 6px 20px rgba(118, 75, 162, 0.4) !important;
     color: white !important;
+}
+
+/* Forzar texto de botones sociales */
+.social-link span, .social-btn span, .btn-social span,
+.footer-social .social-link span,
+footer .social-link span,
+.main-footer .social-link span,
+.footer-content .social-link span {
+    color: white !important;
+    font-weight: 600 !important;
 }
 
 /* Asegurar que todo se vea bien */
