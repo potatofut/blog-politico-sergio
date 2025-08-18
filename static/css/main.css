@@ -32,7 +32,7 @@
 [data-theme="dark"] {
   --bg-primary: #1a202c;
   --bg-secondary: #2d3748;
-  --bg-accent: linear-gradient(135deg, #4a5568 0%, #2d3748 100%);
+  --bg-accent: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   --text-primary: #f7fafc;
   --text-secondary: #e2e8f0;
   --text-muted: #a0aec0;
