@@ -1,11 +1,14 @@
 ﻿{{ define "main" }}
 <div class="fade-in">
     <!-- Header de la pagina de posts -->
-    <header style="text-align: center; margin-bottom: 3rem; padding: 3rem 0; background: var(--bg-secondary); border-radius: 20px;">
-        <h1 style="font-size: 3rem; font-weight: 900; color: var(--text-primary); margin-bottom: 1rem;">Todos los Artículos</h1>
-        <p style="font-size: 1.2rem; color: var(--text-secondary); max-width: 600px; margin: 0 auto;">
-            Explora mi colección completa de análisis políticos, reflexiones sociales y comentarios sobre la actualidad.
-        </p>
+    <header style="text-align: center; margin-bottom: 3rem; padding: 3rem 0; background: var(--bg-secondary); border-radius: 20px; position: relative; overflow: hidden;">
+        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: var(--bg-accent); opacity: 0.1; pointer-events: none;"></div>
+        <div style="position: relative; z-index: 1;">
+            <h1 style="font-size: 3rem; font-weight: 900; color: var(--text-primary); margin-bottom: 1rem;">Todos los Artículos</h1>
+            <p style="font-size: 1.2rem; color: var(--text-secondary); max-width: 600px; margin: 0 auto;">
+                Explora mi colección completa de análisis políticos, reflexiones sociales y comentarios sobre la actualidad.
+            </p>
+        </div>
     </header>
 
     <!-- Grid de posts -->
