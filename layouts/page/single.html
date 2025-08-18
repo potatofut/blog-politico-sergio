@@ -22,16 +22,16 @@
 
         <!-- Contenido principal unificado -->
         <div class="about-content" style="line-height: 1.8; font-size: 1.1rem; margin-top: 3rem; color: #2d3748 !important;">
-            <!-- Introducción -->
-            <div class="about-intro" style="margin-bottom: 3rem;">
-                <p class="lead" style="font-size: 1.3rem; font-weight: 500; color: #4a5568; line-height: 1.7; text-align: center; padding: 2rem; background: #f8f9fa; border-radius: 15px; border-left: 4px solid #007bff;">
-                    💻 Bienvenid@, puede ser que me encuentres programando código o depurando errores que es mi verdadero motor, pero mi pasión de más de 20 años de experiencia es entender las complejidades del ser humano y de la sociedad. Este blog es la confluencia de dos mundos aparentemente opuestos: la lógica estructurada de la programación y el vasto y a menudo caótico universo de la política.
-                </p>
-            </div>
-
             <!-- Contenido del archivo markdown -->
             <div style="color: #2d3748 !important;">
                 {{ .Content }}
+            </div>
+
+            <!-- Widget de frase llamativa -->
+            <div class="quote-highlight" style="margin: 4rem 0; text-align: center; padding: 2rem; background: #f8f9fa; border-radius: 15px; border-left: 4px solid #007bff;">
+                <p class="lead" style="font-size: 1.3rem; font-weight: 500; color: #4a5568; line-height: 1.7; margin: 0;">
+                    💻 Bienvenid@, puede ser que me encuentres programando código o depurando errores que es mi verdadero motor, pero mi pasión de más de 20 años de experiencia es entender las complejidades del ser humano y de la sociedad. Este blog es la confluencia de dos mundos aparentemente opuestos: la lógica estructurada de la programación y el vasto y a menudo caótico universo de la política.
+                </p>
             </div>
 
             <!-- Mensaje de cierre -->
@@ -56,6 +56,54 @@
 
 .about-content li {
     color: #2d3748 !important;
+}
+
+/* Estilos para modo oscuro específicos de la página "Acerca de" */
+[data-theme="dark"] .about-content p,
+.dark .about-content p,
+body.dark .about-content p {
+    color: #e2e8f0 !important;
+}
+
+[data-theme="dark"] .about-content h1,
+[data-theme="dark"] .about-content h2,
+[data-theme="dark"] .about-content h3,
+[data-theme="dark"] .about-content h4,
+[data-theme="dark"] .about-content h5,
+[data-theme="dark"] .about-content h6,
+.dark .about-content h1,
+.dark .about-content h2,
+.dark .about-content h3,
+.dark .about-content h4,
+.dark .about-content h5,
+.dark .about-content h6,
+body.dark .about-content h1,
+body.dark .about-content h2,
+body.dark .about-content h3,
+body.dark .about-content h4,
+body.dark .about-content h5,
+body.dark .about-content h6 {
+    color: #f7fafc !important;
+}
+
+[data-theme="dark"] .about-content li,
+.dark .about-content li,
+body.dark .about-content li {
+    color: #e2e8f0 !important;
+}
+
+/* Widget de frase en modo oscuro */
+[data-theme="dark"] .quote-highlight,
+.dark .quote-highlight,
+body.dark .quote-highlight {
+    background: #2d3748 !important;
+    border-left-color: #4299e1 !important;
+}
+
+[data-theme="dark"] .quote-highlight .lead,
+.dark .quote-highlight .lead,
+body.dark .quote-highlight .lead {
+    color: #e2e8f0 !important;
 }
 
 /* Estilos responsivos específicos para la página "Acerca de" */
@@ -89,12 +137,17 @@
         padding: 0 1rem !important;
     }
     
-    .lead {
+    .lead, .quote-highlight .lead {
         font-size: 1.1rem !important;
         padding: 1.5rem !important;
     }
     
     .about-closing {
+        padding: 1.5rem !important;
+    }
+    
+    .quote-highlight {
+        margin: 3rem 0 !important;
         padding: 1.5rem !important;
     }
 }
@@ -117,6 +170,10 @@
     .profile-photo {
         width: 120px !important;
         height: 120px !important;
+    }
+    
+    .quote-highlight {
+        margin: 2rem 0 !important;
     }
 }
 </style>
