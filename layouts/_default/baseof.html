@@ -53,10 +53,6 @@
     <!-- Header -->
     <header class="main-header">
         <div class="header-container">
-            <a href="{{ "/" | relURL }}" class="site-logo">
-                <img src="/images/sergio.jpg" alt="Sergio Corruchaga" class="logo-photo">
-            </a>
-
             <nav class="main-nav">
                 {{ range .Site.Menus.main }}
                     <a href="{{ .URL | relURL }}" class="nav-link">{{ .Name }}</a>
