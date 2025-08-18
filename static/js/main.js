@@ -104,8 +104,14 @@ class BlogManager {
             const header = document.querySelector('.main-header');
             
             if (header) {
+                const isDarkTheme = document.documentElement.getAttribute('data-theme') === 'dark';
+                
                 if (scrolled > 100) {
-                    header.style.background = 'rgba(255, 255, 255, 0.95)';
+                    if (isDarkTheme) {
+                        header.style.background = 'rgba(26, 32, 44, 0.95)'; // Color oscuro para tema oscuro
+                    } else {
+                        header.style.background = 'rgba(255, 255, 255, 0.95)'; // Color claro para tema claro
+                    }
                     header.style.backdropFilter = 'blur(20px)';
                 } else {
                     header.style.background = 'var(--bg-primary)';
