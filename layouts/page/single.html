@@ -1,11 +1,12 @@
 {{ define "main" }}
-<div class="container">
+<article class="container">
     <div class="about-page" style="max-width: 1000px; margin: 0 auto; padding: 2rem 0;">
-        <div class="about-hero" style="display: flex; align-items: center; gap: 3rem; margin-bottom: 4rem; padding: 3rem; background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); border-radius: 20px; color: white;">
+        <!-- Hero Section -->
+        <header class="about-hero" style="display: flex; align-items: center; gap: 3rem; margin-bottom: 4rem; padding: 3rem; background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); border-radius: 20px; color: white;">
             <!-- Foto del perfil -->
             <div class="profile-section" style="flex: 1; text-align: center;">
                 <div class="profile-photo" style="width: 200px; height: 200px; border-radius: 50%; overflow: hidden; margin: 0 auto 2rem; border: 4px solid rgba(255,255,255,0.2);">
-                    <img src="{{ "images/sergio.jpg" | relURL }}" alt="Sergio Corruchaga" style="width: 100%; height: 100%; object-fit: cover;" />
+                    <img src="{{ "images/sergio.jpg" | relURL }}" alt="Sergio Corruchaga" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy" />
                 </div>
                 <h1 style="font-size: 2.5rem; font-weight: 900; margin-bottom: 0.5rem; color: white;">Sergio Corruchaga</h1>
                 <p style="font-size: 1.2rem; opacity: 0.9; margin-bottom: 0;">ANALISTA POLÍTICO Y DESARROLLADOR</p>
@@ -14,24 +15,63 @@
             <!-- Imagen decorativa del león -->
             <div class="decorative-image" style="flex: 1; text-align: center;">
                 <div style="width: 300px; height: 400px; background: linear-gradient(45deg, #00f5ff, #0080ff); border-radius: 20px; margin: 0 auto; position: relative; overflow: hidden;">
-                    <img src="{{ "images/Leon.jpg" | relURL }}" alt="León" style="width: 100%; height: 100%; object-fit: cover; border-radius: 20px;" />
+                    <img src="{{ "images/Leon.jpg" | relURL }}" alt="León - Imagen representativa" style="width: 100%; height: 100%; object-fit: cover; border-radius: 20px;" loading="lazy" />
                 </div>
             </div>
-        </div>
+        </header>
 
-        <!-- Contenido principal -->
-        <div class="about-content" style="line-height: 1.8; font-size: 1.1rem; margin-top: 3rem; padding-top: 2rem; color: #2d3748 !important;">
+        <!-- Contenido principal unificado -->
+        <div class="about-content" style="line-height: 1.8; font-size: 1.1rem; margin-top: 3rem; color: #2d3748 !important;">
+            <!-- Introducción -->
+            <div class="about-intro" style="margin-bottom: 3rem;">
+                <p class="lead" style="font-size: 1.3rem; font-weight: 500; color: #4a5568; line-height: 1.7; text-align: center; padding: 2rem; background: #f8f9fa; border-radius: 15px; border-left: 4px solid #007bff;">
+                    💻 Bienvenid@, puede ser que me encuentres programando código o depurando errores que es mi verdadero motor, pero mi pasión de más de 20 años de experiencia es entender las complejidades del ser humano y de la sociedad. Este blog es la confluencia de dos mundos aparentemente opuestos: la lógica estructurada de la programación y el vasto y a menudo caótico universo de la política.
+                </p>
+            </div>
+
+            <!-- Contenido del archivo markdown -->
             {{ .Content }}
-        </div>
 
-        <!-- Mensaje de bienvenida -->
-        <div class="welcome-message" style="background: #f8f9fa; padding: 2rem; border-radius: 15px; margin-top: 3rem; text-align: center; border-left: 4px solid #007bff;">
-            <p style="font-style: italic; font-size: 1.2rem; margin: 0; color: #666;">
-                💻 "Bienvenido, puede ser que me encuentres programando código o depurando"
-            </p>
+            <!-- Secciones detalladas -->
+            <div class="about-sections" style="margin-top: 3rem;">
+                <section class="about-section" style="margin-bottom: 3rem; padding: 2rem; background: #ffffff; border-radius: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                    <h2 style="color: #2d3748; font-size: 1.5rem; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid #007bff;">Mi Trayectoria</h2>
+                    <p style="color: #4a5568;">
+                        Mi camino comenzó en la filosofía, con una especialización que me sumergió durante más de dos décadas en el estudio de la política y la psicología. Esta formación no es solo una base teórica; es una lente a través de la cual observo cada acontecimiento. Me ha enseñado a no quedarme en la superficie, a buscar las motivaciones profundas, a conectar los hechos actuales con los grandes debates de la historia y a comprender que detrás de cada titular hay una compleja red de ideas, emociones y estructuras de poder.
+                    </p>
+                </section>
+
+                <section class="about-section" style="margin-bottom: 3rem; padding: 2rem; background: #ffffff; border-radius: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                    <h2 style="color: #2d3748; font-size: 1.5rem; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid #007bff;">Tecnología y Análisis</h2>
+                    <p style="color: #4a5568;">
+                        Quizás te sorprenda que alguien con esta trayectoria se haya titulado recientemente como Técnico Superior en Desarrollo de Aplicaciones Multiplataforma. Pero la verdad es que ambas disciplinas se complementan a la perfección. La tecnología me ha brindado una metodología para desglosar problemas, para buscar patrones y para construir soluciones. Es una herramienta poderosa que aplico a mi análisis político diario: identificar fallos en el sistema, entender las consecuencias de cada "línea de código" (ley o decisión), y buscar una lógica donde a menudo parece no haberla.
+                    </p>
+                </section>
+
+                <section class="about-section" style="margin-bottom: 3rem; padding: 2rem; background: #ffffff; border-radius: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                    <h2 style="color: #2d3748; font-size: 1.5rem; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid #007bff;">Mi Objetivo</h2>
+                    <p style="color: #4a5568;">
+                        Mi objetivo en este espacio es ofrecerte un análisis riguroso, que vaya más allá del ruido mediático. Quiero que cada entrada sea una pieza de un rompecabezas más grande, en la que se entrelazan la historia, el derecho, la economía, la ciencia, y, por supuesto, la filosofía. Con mis blogs, busco crear un espacio donde el conocimiento se comparta con honestidad y profesionalidad, pero sin perder la naturalidad y el toque humano.
+                    </p>
+                </section>
+
+                <section class="about-section" style="margin-bottom: 3rem; padding: 2rem; background: #ffffff; border-radius: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                    <h2 style="color: #2d3748; font-size: 1.5rem; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid #007bff;">Mi Misión</h2>
+                    <p style="color: #4a5568;">
+                        En un mundo saturado de información, mi misión es simple pero ambiciosa: ofrecer un faro de conocimiento útil y de calidad, construido con dedicación, una visión de futuro y ese humor ágil que nos ayuda a navegar las aguas de la actualidad.
+                    </p>
+                </section>
+            </div>
+
+            <!-- Mensaje de cierre -->
+            <div class="about-closing" style="margin-top: 3rem; text-align: center; padding: 2rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 15px; color: white;">
+                <p style="font-size: 1.2rem; font-weight: 600; margin: 0;">
+                    <strong>Gracias por acompañarme en este viaje.</strong>
+                </p>
+            </div>
         </div>
     </div>
-</div>
+</article>
 
 <style>
 /* Estilos responsivos específicos para la página "Acerca de" */
@@ -39,10 +79,12 @@
     .about-hero {
         flex-direction: column !important;
         text-align: center !important;
+        gap: 2rem !important;
+        padding: 2rem !important;
     }
     
     .decorative-image {
-        margin-top: 2rem;
+        margin-top: 1rem;
     }
     
     .decorative-image > div {
@@ -61,6 +103,45 @@
     
     .about-content {
         padding: 0 1rem !important;
+    }
+    
+    .about-section {
+        margin-bottom: 2rem !important;
+        padding: 1.5rem !important;
+    }
+    
+    .about-section h2 {
+        font-size: 1.3rem !important;
+    }
+    
+    .lead {
+        font-size: 1.1rem !important;
+        padding: 1.5rem !important;
+    }
+    
+    .about-closing {
+        padding: 1.5rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-page {
+        padding: 1rem 0 !important;
+    }
+    
+    .about-hero {
+        padding: 1.5rem !important;
+        margin-bottom: 2rem !important;
+    }
+    
+    .decorative-image > div {
+        width: 200px !important;
+        height: 250px !important;
+    }
+    
+    .profile-photo {
+        width: 120px !important;
+        height: 120px !important;
     }
 }
 </style>
