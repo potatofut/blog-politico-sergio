@@ -1076,21 +1076,21 @@ body {
     align-items: center;
     gap: 0.8rem;
     padding: 1rem 2rem;
-    background: linear-gradient(135deg, var(--accent-color), var(--primary-color));
+    background: linear-gradient(135deg, #667eea, #764ba2);
     color: white;
     text-decoration: none;
     border-radius: 50px;
     font-weight: 600;
     font-size: 1.1rem;
     transition: all 0.3s ease;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
     min-width: 160px;
     justify-content: center;
 }
 
 .social-link:hover {
     transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 8px 25px rgba(118, 75, 162, 0.4);
     color: white;
 }
 
@@ -1263,21 +1263,21 @@ body {
     align-items: center;
     gap: 0.5rem;
     padding: 0.8rem 1.5rem;
-    background: var(--primary-color);
+    background: linear-gradient(135deg, #667eea, #764ba2);
     color: white !important;
     text-decoration: none;
     border-radius: 25px;
     font-weight: 600;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
     min-width: 140px;
     justify-content: center;
 }
 
 .social-link:hover {
-    background: var(--accent-color);
+    background: linear-gradient(135deg, #764ba2, #667eea);
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 6px 20px rgba(118, 75, 162, 0.4);
     color: white !important;
 }
 
@@ -1342,21 +1342,21 @@ body {
     align-items: center !important;
     gap: 0.5rem !important;
     padding: 0.8rem 1.5rem !important;
-    background: #2563eb !important; /* Azul sólido */
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important; /* Gradiente púrpura */
     color: #ffffff !important;
     text-decoration: none !important;
     border-radius: 25px !important;
     font-weight: 600 !important;
     transition: all 0.3s ease !important;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3) !important;
     min-width: 140px !important;
     justify-content: center !important;
 }
 
 .social-link:hover {
-    background: #dc2626 !important; /* Rojo sólido para hover */
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%) !important; /* Gradiente púrpura invertido */
     transform: translateY(-2px) !important;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2) !important;
+    box-shadow: 0 6px 20px rgba(118, 75, 162, 0.4) !important;
     color: #ffffff !important;
 }
 
@@ -1383,25 +1383,25 @@ body {
     align-items: center !important;
     gap: 0.8rem !important;
     text-decoration: none !important;
-    color: #1f2937 !important; /* Color oscuro sólido */
+    color: #667eea !important; /* Color púrpura principal */
     font-weight: 800 !important;
     font-size: 1.5rem !important;
     transition: all 0.3s ease !important;
 }
 
 .site-logo:hover {
-    color: #dc2626 !important; /* Rojo para hover */
+    color: #764ba2 !important; /* Púrpura secundario para hover */
     transform: scale(1.02) !important;
 }
 
 .logo-text {
-    color: #1f2937 !important; /* Color sólido sin gradiente */
+    color: #667eea !important; /* Color púrpura sólido */
     font-weight: 800 !important;
     font-size: 1.5rem !important;
 }
 
 .footer-title {
-    color: #1f2937 !important; /* Color oscuro sólido */
+    color: #667eea !important; /* Color púrpura principal */
     font-size: 1.5rem !important;
     font-weight: 700 !important;
     margin-bottom: 1.5rem !important;
@@ -1410,24 +1410,24 @@ body {
 
 /* Modo oscuro específico */
 [data-theme="dark"] .footer-title {
-    color: #ffffff !important;
+    color: #9f7aea !important; /* Púrpura claro para modo oscuro */
 }
 
 [data-theme="dark"] .site-logo {
-    color: #ffffff !important;
+    color: #9f7aea !important; /* Púrpura claro para modo oscuro */
 }
 
 [data-theme="dark"] .logo-text {
-    color: #ffffff !important;
+    color: #9f7aea !important; /* Púrpura claro para modo oscuro */
 }
 
 [data-theme="dark"] .social-link {
-    background: #dc2626 !important;
+    background: linear-gradient(135deg, #9f7aea 0%, #63b3ed 100%) !important;
     color: #ffffff !important;
 }
 
 [data-theme="dark"] .social-link:hover {
-    background: #2563eb !important;
+    background: linear-gradient(135deg, #63b3ed 0%, #9f7aea 100%) !important;
     color: #ffffff !important;
 }
 
@@ -1443,15 +1443,15 @@ body {
     font-size: 3rem !important;
     font-weight: 800 !important;
     margin: 0 0 0.5rem 0 !important;
-    color: var(--primary-color) !important;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+    color: #667eea !important; /* Color púrpura principal sólido */
+    text-shadow: 0 2px 4px rgba(102, 126, 234, 0.3) !important;
     /* Eliminamos gradiente que causaba difuminación */
 }
 
 /* Modo oscuro específico para el nombre */
 [data-theme="dark"] .author-name {
-    color: #ffffff !important;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3) !important;
+    color: #9f7aea !important; /* Púrpura claro para modo oscuro */
+    text-shadow: 0 2px 4px rgba(159, 122, 234, 0.4) !important;
 }
 
 /* ===========================================
