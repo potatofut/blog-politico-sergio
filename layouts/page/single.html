@@ -2,7 +2,7 @@
 <article class="container">
     <div class="about-page" style="max-width: 1000px; margin: 0 auto; padding: 2rem 0;">
         <!-- Hero Section -->
-        <header class="about-hero" style="display: flex; align-items: center; gap: 3rem; margin-bottom: 4rem; padding: 3rem; background: #e2e8f0; border-radius: 20px; color: #2d3748;">
+        <header class="about-hero" style="display: flex; align-items: center; gap: 3rem; margin-bottom: 4rem; padding: 3rem; background: #e2e8f0; border-radius: 20px; color: #2d3748; transition: all 0.3s ease;">
             <!-- Foto del perfil -->
             <div class="profile-section" style="flex: 1; text-align: center;">
                 <div class="profile-photo" style="width: 200px; height: 200px; border-radius: 50%; overflow: hidden; margin: 0 auto 2rem; border: 4px solid rgba(45,55,72,0.2);">
@@ -90,6 +90,32 @@ body.dark .about-content h6 {
 .dark .about-content li,
 body.dark .about-content li {
     color: #e2e8f0 !important;
+}
+
+/* Hero section en modo oscuro */
+[data-theme="dark"] .about-hero,
+.dark .about-hero,
+body.dark .about-hero {
+    background: #2d3748 !important;
+    color: #e2e8f0 !important;
+}
+
+[data-theme="dark"] .about-hero h1,
+.dark .about-hero h1,
+body.dark .about-hero h1 {
+    color: #f7fafc !important;
+}
+
+[data-theme="dark"] .about-hero p,
+.dark .about-hero p,
+body.dark .about-hero p {
+    color: #e2e8f0 !important;
+}
+
+[data-theme="dark"] .profile-photo,
+.dark .profile-photo,
+body.dark .profile-photo {
+    border-color: rgba(226, 232, 240, 0.3) !important;
 }
 
 /* Widget de frase en modo oscuro */

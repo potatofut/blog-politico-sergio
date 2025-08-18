@@ -22,6 +22,10 @@
   --success-color: #48bb78;
   --warning-color: #ed8936;
   --error-color: #f56565;
+  
+  /* Variables para botones sociales - Morado como el botón "Explorar Contenido" */
+  --primary-color: #667eea;
+  --accent-color: #764ba2;
 }
 
 /* Tema oscuro */
@@ -40,6 +44,10 @@
   /* Colores de acento para tema oscuro */
   --accent-primary: #63b3ed;
   --accent-secondary: #9f7aea;
+  
+  /* Variables para botones sociales en modo oscuro */
+  --primary-color: #63b3ed;
+  --accent-color: #9f7aea;
 }
 
 /* Reset y base */
@@ -620,7 +628,8 @@ body {
   outline: 2px solid var(--accent-primary);
   outline-offset: 2px;
 }
-/ *   E s t i l o s   a d i c i o n a l e s   p a r a   l a   p � g i n a   A b o u t   * /  
+/ *   E s t i l o s   a d i c i o n a l e s   p a r a   l a   p � g i n a   A b o u t   * / 
+ 
  
 /* ===========================================
    ESTILOS ESPECÍFICOS PARA PÁGINA ABOUT
