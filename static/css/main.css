@@ -763,20 +763,20 @@ body {
     align-items: center;
     gap: 0.5rem;
     padding: 0.8rem 1.5rem;
-    background: var(--accent-color);
-    color: white;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+    color: white !important;
     text-decoration: none;
     border-radius: 25px;
     font-weight: 500;
     transition: all 0.3s ease;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3) !important;
 }
 
 .social-link:hover {
-    background: var(--primary-color);
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%) !important;
     transform: translateY(-2px);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-    color: white;
+    box-shadow: 0 6px 20px rgba(118, 75, 162, 0.4) !important;
+    color: white !important;
 }
 
 .social-link span:first-child {
@@ -1521,4 +1521,51 @@ body {
     .about-hero {
         gap: 1.5rem !important;
     }
+}
+
+/* ===========================================
+   REGLA FINAL - FORZAR BOTONES SOCIALES PÚRPURA
+   =========================================== */
+
+/* Sobrescribir TODAS las definiciones de botones sociales */
+.footer-social .social-link,
+.main-footer .social-link,
+footer .social-link,
+.social-link,
+a[href*="twitter"], 
+a[href*="x.com"], 
+a[href*="tiktok"],
+a[href*="Corrutruth"],
+a[href*="sergio_corruchaga"] {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+    color: white !important;
+    border: none !important;
+    text-decoration: none !important;
+    font-weight: 600 !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3) !important;
+}
+
+.footer-social .social-link:hover,
+.main-footer .social-link:hover,
+footer .social-link:hover,
+.social-link:hover,
+a[href*="twitter"]:hover, 
+a[href*="x.com"]:hover, 
+a[href*="tiktok"]:hover,
+a[href*="Corrutruth"]:hover,
+a[href*="sergio_corruchaga"]:hover {
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%) !important;
+    color: white !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 20px rgba(118, 75, 162, 0.4) !important;
+}
+
+/* Forzar texto de botones sociales */
+.footer-social .social-link span,
+.main-footer .social-link span,
+footer .social-link span,
+.social-link span {
+    color: white !important;
+    font-weight: 600 !important;
 }
