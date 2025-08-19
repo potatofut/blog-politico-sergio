@@ -1,6 +1,6 @@
 ﻿---
 title: "Reality Show Político: Análisis de la Actualidad Madrileña y Nacional"
-date: 2025-08-19T04:00:00+01:00
+date: 2025-08-19T03:00:00+01:00
 draft: false
 description: "Análisis crítico sobre el bloqueo de fondos en Madrid, la crisis de vivienda y las declaraciones de Trump sobre Ucrania"
 tags: ["política", "análisis", "madrid", "vivienda", "ucrania", "trump"]
