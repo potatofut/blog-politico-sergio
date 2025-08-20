@@ -8,13 +8,48 @@
     <language>es</language>
     <managingEditor>sergio@corruchaga.com (Sergio Corruchaga)</managingEditor>
     <webMaster>sergio@corruchaga.com (Sergio Corruchaga)</webMaster>
-    <lastBuildDate>Tue, 19 Aug 2025 03:00:00 +0100</lastBuildDate>
+    <lastBuildDate>Wed, 20 Aug 2025 03:00:00 +0100</lastBuildDate>
     <atom:link href="https://potatofut.github.io/blog-politico-sergio/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Actualidad</title>
+      <link>https://potatofut.github.io/blog-politico-sergio/tags/actualidad/</link>
+      <pubDate>Wed, 20 Aug 2025 03:00:00 +0100</pubDate><author>sergio@corruchaga.com (Sergio Corruchaga)</author>
+      <guid>https://potatofut.github.io/blog-politico-sergio/tags/actualidad/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Análisis</title>
       <link>https://potatofut.github.io/blog-politico-sergio/tags/an%C3%A1lisis/</link>
-      <pubDate>Tue, 19 Aug 2025 03:00:00 +0100</pubDate><author>sergio@corruchaga.com (Sergio Corruchaga)</author>
+      <pubDate>Wed, 20 Aug 2025 03:00:00 +0100</pubDate><author>sergio@corruchaga.com (Sergio Corruchaga)</author>
       <guid>https://potatofut.github.io/blog-politico-sergio/tags/an%C3%A1lisis/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>IA</title>
+      <link>https://potatofut.github.io/blog-politico-sergio/tags/ia/</link>
+      <pubDate>Wed, 20 Aug 2025 03:00:00 +0100</pubDate><author>sergio@corruchaga.com (Sergio Corruchaga)</author>
+      <guid>https://potatofut.github.io/blog-politico-sergio/tags/ia/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Incendios</title>
+      <link>https://potatofut.github.io/blog-politico-sergio/tags/incendios/</link>
+      <pubDate>Wed, 20 Aug 2025 03:00:00 +0100</pubDate><author>sergio@corruchaga.com (Sergio Corruchaga)</author>
+      <guid>https://potatofut.github.io/blog-politico-sergio/tags/incendios/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Política</title>
+      <link>https://potatofut.github.io/blog-politico-sergio/tags/pol%C3%ADtica/</link>
+      <pubDate>Wed, 20 Aug 2025 03:00:00 +0100</pubDate><author>sergio@corruchaga.com (Sergio Corruchaga)</author>
+      <guid>https://potatofut.github.io/blog-politico-sergio/tags/pol%C3%ADtica/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Sociedad</title>
+      <link>https://potatofut.github.io/blog-politico-sergio/tags/sociedad/</link>
+      <pubDate>Wed, 20 Aug 2025 03:00:00 +0100</pubDate><author>sergio@corruchaga.com (Sergio Corruchaga)</author>
+      <guid>https://potatofut.github.io/blog-politico-sergio/tags/sociedad/</guid>
       <description></description>
     </item>
     <item>
@@ -22,13 +57,6 @@
       <link>https://potatofut.github.io/blog-politico-sergio/tags/madrid/</link>
       <pubDate>Tue, 19 Aug 2025 03:00:00 +0100</pubDate><author>sergio@corruchaga.com (Sergio Corruchaga)</author>
       <guid>https://potatofut.github.io/blog-politico-sergio/tags/madrid/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Política</title>
-      <link>https://potatofut.github.io/blog-politico-sergio/tags/pol%C3%ADtica/</link>
-      <pubDate>Tue, 19 Aug 2025 03:00:00 +0100</pubDate><author>sergio@corruchaga.com (Sergio Corruchaga)</author>
-      <guid>https://potatofut.github.io/blog-politico-sergio/tags/pol%C3%ADtica/</guid>
       <description></description>
     </item>
     <item>
@@ -50,13 +78,6 @@
       <link>https://potatofut.github.io/blog-politico-sergio/tags/vivienda/</link>
       <pubDate>Tue, 19 Aug 2025 03:00:00 +0100</pubDate><author>sergio@corruchaga.com (Sergio Corruchaga)</author>
       <guid>https://potatofut.github.io/blog-politico-sergio/tags/vivienda/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Actualidad</title>
-      <link>https://potatofut.github.io/blog-politico-sergio/tags/actualidad/</link>
-      <pubDate>Sun, 17 Aug 2025 11:26:13 +0200</pubDate><author>sergio@corruchaga.com (Sergio Corruchaga)</author>
-      <guid>https://potatofut.github.io/blog-politico-sergio/tags/actualidad/</guid>
       <description></description>
     </item>
   </channel>
