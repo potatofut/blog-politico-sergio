@@ -1,6 +1,6 @@
 ﻿---
 title: "[TÍTULO DEL ARTÍCULO - SEO OPTIMIZADO]"
-date: 2025-08-17T10:00:00+01:00
+date: [FECHA]
 draft: true
 description: "[Meta descripción 150-160 caracteres - Resume el artículo y incluye palabra clave principal]"
 slug: "[url-amigable-sin-espacios-ni-acentos]"
@@ -25,8 +25,8 @@ weight: 1
 articleSchema:
   type: "Article"
   headline: "[Título del artículo]"
-  datePublished: "2025-08-17"
-  dateModified: "2025-08-17"
+  datePublished: "[FECHA]"
+  dateModified: "[FECHA]"
   author: "Sergio Corruchaga"
   publisher: "Sergio Corruchaga - Blog Político"
 ---
@@ -129,4 +129,4 @@ Comparte tu perspectiva en redes sociales y etiquétame [@Corrutruth](https://x.
 
 ** Nota del autor:** *[Opcional - Reflexión personal o contexto adicional sobre por qué escribiste este artículo]*
 
-** Última actualización:** 17 de agosto de 2025
+** Última actualización:** [FECHA]
