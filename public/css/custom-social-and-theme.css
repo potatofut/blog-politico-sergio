@@ -1,0 +1,131 @@
+/* =====================================================
+   ESTILOS PERSONALIZADOS - BOTONES SOCIALES Y TEMAS
+   ===================================================== */
+
+/* BOTONES DE REDES SOCIALES */
+.social-btn {
+    /* Modo claro: gradiente morado elegante */
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+    color: white !important;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3) !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.social-btn:hover {
+    transform: translateY(-3px) !important;
+    box-shadow: 0 12px 30px rgba(102, 126, 234, 0.5) !important;
+    color: white !important;
+    text-decoration: none !important;
+}
+
+/* MODO OSCURO para botones sociales */
+@media (prefers-color-scheme: dark) {
+    .social-btn {
+        background: linear-gradient(135deg, #00f5ff 0%, #83e97b 25%, #42e695 50%, #06ffa5 75%, #00d4ff 100%) !important;
+        color: white !important;
+        box-shadow: 0 4px 15px rgba(0, 212, 255, 0.3) !important;
+    }
+    
+    .social-btn:hover {
+        transform: translateY(-3px) !important;
+        box-shadow: 0 12px 30px rgba(66, 230, 149, 0.4) !important;
+        color: white !important;
+    }
+}
+
+/* =====================================================
+   TEXTO "ACERCA DE" - COLORES APROPIADOS POR TEMA
+   ===================================================== */
+
+/* MODO CLARO: Texto oscuro para legibilidad */
+.about-content p {
+    margin-bottom: 1.5rem !important;
+    color: #2d3748 !important; /* Gris muy oscuro, casi negro */
+    text-align: justify;
+    line-height: 1.8;
+    font-weight: 500 !important; /* Un poco más grueso */
+}
+
+.about-content strong {
+    color: #1a202c !important; /* Negro suave */
+    font-weight: 700 !important; /* Más grueso para destacar */
+}
+
+.welcome-message {
+    background: #f8f9fa !important;
+    border-left: 4px solid #007bff !important;
+    padding: 2rem !important;
+    border-radius: 15px !important;
+    margin-top: 3rem !important;
+}
+
+.welcome-message p {
+    color: #666666 !important;
+    font-style: italic;
+    margin: 0 !important;
+}
+
+/* MODO OSCURO: Texto blanco para legibilidad */
+@media (prefers-color-scheme: dark) {
+    .about-content p {
+        color: #ffffff !important;
+    }
+    
+    .about-content strong {
+        color: #ffffff !important;
+    }
+    
+    .welcome-message {
+        background: #2d3748 !important;
+        border-left-color: #00d4ff !important;
+    }
+    
+    .welcome-message p {
+        color: #ffffff !important;
+    }
+}
+
+/* =====================================================
+   SECCIÓN SOCIAL - ESTILOS GENERALES
+   ===================================================== */
+
+.social-section {
+    background: var(--bg-secondary, #f8fafc) !important;
+    transition: background-color 0.3s ease;
+}
+
+@media (prefers-color-scheme: dark) {
+    .social-section {
+        background: #2d3748 !important;
+    }
+}
+
+.social-section h3 {
+    color: var(--text-primary, #1a202c) !important;
+}
+
+@media (prefers-color-scheme: dark) {
+    .social-section h3 {
+        color: #ffffff !important;
+    }
+}
+
+/* =====================================================
+   RESPONSIVO
+   ===================================================== */
+
+@media (max-width: 768px) {
+    .social-btn {
+        padding: 0.8rem 1.5rem !important;
+        font-size: 0.9rem !important;
+    }
+    
+    .social-section {
+        padding: 2rem 0 !important;
+    }
+    
+    .social-section h3 {
+        font-size: 1.5rem !important;
+        margin-bottom: 1.5rem !important;
+    }
+}
